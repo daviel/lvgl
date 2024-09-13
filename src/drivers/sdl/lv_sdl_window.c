@@ -359,8 +359,7 @@ static void window_create(lv_display_t * disp)
     SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
     
-    dsc->renderer = SDL_CreateRenderer(dsc->window, -1,
-                                       LV_SDL_ACCELERATED ? SDL_RENDERER_ACCELERATED : SDL_RENDERER_SOFTWARE);
+    dsc->renderer = SDL_CreateRenderer(dsc->window, -1, SDL_RENDERER_ACCELERATED);
 #if LV_USE_DRAW_SDL == 0
     texture_resize(disp);
 
