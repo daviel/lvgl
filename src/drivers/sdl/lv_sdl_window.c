@@ -389,6 +389,8 @@ static void window_update(lv_display_t * disp)
     /*Update the renderer with the texture containing the rendered image*/
     SDL_RenderCopy(dsc->renderer, dsc->texture, NULL, NULL);
 #endif
+    SDL_SetRenderDrawColor(dsc->renderer, 0, 0, 0, 0);
+    SDL_RenderClear(dsc->renderer);
     SDL_RenderPresent(dsc->renderer);
 }
 
