@@ -383,7 +383,7 @@ static void texture_resize(lv_display_t * disp)
 #endif
     //    px_format = SDL_PIXELFORMAT_BGR24;
 
-    dsc->texture = SDL_CreateTexture(dsc->renderer, px_format,
+    dsc->texture = SDL_CreateTexture(dsc->renderer, SDL_PIXELFORMAT_ARGB8888,
                                      SDL_TEXTUREACCESS_STATIC, hor_res, ver_res);
     SDL_SetTextureBlendMode(dsc->texture, SDL_BLENDMODE_BLEND);
 }
